@@ -8,9 +8,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class VacationPayService {
 
-    private static final int WORKING_DAYS_IN_MONTH = 29; // Среднее число рабочих дней
+    private static final int WORKING_DAYS_IN_MONTH = 29;
 
     public VacationPayResponse calculateVacationPay(VacationPayRequest request) {
+        if(request.getAverageSalary()<= 0)
+        {
+            return new VacationPayResponse(0.0);
+        }
         double dailyRate = request.getAverageSalary() / WORKING_DAYS_IN_MONTH;
         int vacationDays = request.getVacationDays();
         
