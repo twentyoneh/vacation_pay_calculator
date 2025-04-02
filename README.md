@@ -1,1 +1,1 @@
-http://localhost:8080/calculate?averageSalary=60000&vacationDays=14&vacationDates=2024-05-01,2024-05-09
+http://localhost:8080/calculate?averageSalary=60000&vacationDays=14&vacationDates=2024-05-01,2024-05-02,2024-05-03,2024-05-04,2024-05-05,2024-05-06,2024-05-07,2024-05-08,2024-05-09,2024-05-10,2024-05-11,2024-05-12,2024-05-13,2024-05-14

@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class HolidayUtils {
 
-    private static final Set<LocalDate> HOLIDAYS = Set.of(
+    private static final Set<LocalDate> HOLIDAYS = Set.of(  // - Список праздничных дней
         LocalDate.of(2025, 1, 1),
         LocalDate.of(2025, 1, 2),
         LocalDate.of(2025, 1, 3),

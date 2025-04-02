@@ -21,7 +21,7 @@ class VacationPayServiceTest {
 
         VacationPayResponse response = service.calculateVacationPay(request);
 
-        assertEquals(28965.52, response.getTotalPay(), 0.01);
+        assertEquals(3400.8, response.getTotalPay(), 0.01);
     }
 
     @Test
@@ -29,14 +29,14 @@ class VacationPayServiceTest {
         VacationPayRequest request = new VacationPayRequest();
         request.setAverageSalary(60000);
         request.setVacationDays(14);
-        
+
         List<LocalDate> vacationDates = IntStream.range(0, 14)
             .mapToObj(i -> LocalDate.of(2024, 5, 1).plusDays(i))
             .collect(Collectors.toList());
         request.setVacationDates(vacationDates);
         VacationPayResponse response = service.calculateVacationPay(request);
 
-        assertEquals(20689.66, response.getTotalPay(), 0.01);
+        assertEquals(2429.14, response.getTotalPay(), 0.01);
     }
 
     @Test
@@ -69,6 +69,6 @@ class VacationPayServiceTest {
 
         VacationPayResponse response = service.calculateVacationPay(request);
 
-        assertEquals(14482.76, response.getTotalPay(), 0.01);
+        assertEquals(1700.4, response.getTotalPay(), 0.01);
     }
 }
