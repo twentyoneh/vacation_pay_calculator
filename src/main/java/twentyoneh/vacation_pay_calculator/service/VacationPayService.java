@@ -6,7 +6,8 @@ import twentyoneh.vacation_pay_calculator.utils.HolidayUtils;
 import org.springframework.stereotype.Service;
 
 @Service
-public class VacationPayService {
+public class VacationPayService 
+{
 
     private static final int WORKING_DAYS_IN_YEAR =  247;    // Количество рабочих дней в 2025 году
 
@@ -18,7 +19,8 @@ public class VacationPayService {
         double dailyRate = request.getAverageSalary() / WORKING_DAYS_IN_YEAR;
         int vacationDays = request.getVacationDays();
         
-        if (request.getVacationDates() != null && !request.getVacationDates().isEmpty()) {
+        if (request.getVacationDates() != null && !request.getVacationDates().isEmpty()) 
+        {
             vacationDays = HolidayUtils.calculateEffectiveVacationDays(request.getVacationDates());
         }
 

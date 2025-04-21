@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.*;
 // Данный класс является контроллером REST для расчета отпускных
 @RestController
 @RequestMapping("/calculate")
-public class VacationPayController {
+public class VacationPayController 
+{
 
     private final VacationPayService vacationPayService;
 
-    public VacationPayController(VacationPayService vacationPayService) {
+    public VacationPayController(VacationPayService vacationPayService) 
+    {
         this.vacationPayService = vacationPayService;
     }
 

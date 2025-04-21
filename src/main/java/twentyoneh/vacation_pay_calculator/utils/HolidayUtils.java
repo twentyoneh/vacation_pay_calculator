@@ -5,7 +5,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
-public class HolidayUtils {
+public class HolidayUtils 
+{
 
     private static final Set<LocalDate> HOLIDAYS = Set.of(  // - Список праздничных дней
         LocalDate.of(2025, 1, 1),
@@ -24,13 +25,15 @@ public class HolidayUtils {
         LocalDate.of(2025, 11, 4) 
     );
 
-    public static int calculateEffectiveVacationDays(List<LocalDate> vacationDates) {
+    public static int calculateEffectiveVacationDays(List<LocalDate> vacationDates) 
+    {
         return (int) vacationDates.stream()
             .filter(date -> !HOLIDAYS.contains(date) && !isWeekend(date))
             .count();
     }
 
-    private static boolean isWeekend(LocalDate date) {
+    private static boolean isWeekend(LocalDate date) 
+    {
         return date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY;
     }
 }
